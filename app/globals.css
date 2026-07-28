@@ -150,6 +150,7 @@ footer{background:#050609;color:#f3f0e7}
   .card-stage,.work-card.reverse .card-stage{display:flex;flex-direction:column;min-height:auto;border-radius:22px}
   .card-stage:before{display:none}
   .product-art,.work-card.reverse .product-art,.work-card:nth-child(3n) .product-art{position:relative;inset:auto;width:100%;min-height:460px;border-radius:0}
+  .art-composite-base,.art-layer{background-size:contain}
   .work-copy,.work-card.reverse .work-copy,.work-card:nth-child(3n) .work-copy{position:relative;inset:auto;width:100%;min-height:0;transform:none;display:flex;padding:38px 22px 50px;border:0;border-radius:0;background:#0d1017;box-shadow:none;backdrop-filter:none}
   .work-card:nth-child(3n) .work-copy h3{font-size:16vw;margin:50px 0 30px}
   .project-index{font-size:42vw;bottom:auto;top:345px}
