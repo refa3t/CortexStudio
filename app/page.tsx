@@ -19,15 +19,18 @@ const projects = [
 ];
 const filters=["All","Hospitality","Retail","Industry","Healthcare","Services","Web"];
 
+const BASE_PATH=process.env.NEXT_PUBLIC_BASE_PATH??"";
+
 function ProductArt({p}:{p:(typeof projects)[number]}){
   const useLayers=Boolean(p.image);
   const assemblyVariant=(Number(p.n)-1)%6;
   const layerNames=["core","north","west","east","south","spark"];
+  const imageUrl=p.image?`${BASE_PATH}${p.image}`:"";
   return <div className="product-art" style={{"--accent":p.color} as React.CSSProperties}>
     <span className="art-grid"/><b className="art-mark">{p.mark}</b>
     {useLayers?<div className={`art-composite assembly-${assemblyVariant} ${p.name==="BellaCity"?"bella-composite":""}`} role="img" aria-label={`${p.name} project artwork`}>
-      <i className="art-composite-base" style={{backgroundImage:`url("${p.image}")`}}/>
-      {layerNames.map(name=><i className={`art-layer layer-${name}`} key={name} style={{backgroundImage:`url("${p.image}")`}}/>)}
+      <i className="art-composite-base" style={{backgroundImage:`url("${imageUrl}")`}}/>
+      {layerNames.map(name=><i className={`art-layer layer-${name}`} key={name} style={{backgroundImage:`url("${imageUrl}")`}}/>)}
     </div>:p.image?<Image src={p.image} alt={`${p.name} original product artwork`} fill sizes="(max-width:800px) 90vw, 50vw" className="art-image"/>:
     <div className="art-screen"><div className="screen-nav"><i/><i/><i/></div><div className="screen-body"><aside><b>{p.mark}</b><i/><i/><i/><i/></aside><section><div className="screen-title"/><div className="screen-stats"><i/><i/><i/></div><div className="screen-graph">{[35,62,47,88,53,74,42,92,66,80].map((h,i)=><i key={i} style={{height:`${h}%`}}/>)}</div></section></div></div>}
     <span className="art-status">{p.status}</span><span className="art-number">{p.n}</span>
