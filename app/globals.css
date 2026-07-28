@@ -34,7 +34,7 @@ footer{padding:110px 3vw 30px;background:var(--ink);color:var(--paper);position:
 .work-card:hover .product-art:after{transform:translateX(70%) rotate(8deg)}
 .art-image{will-change:transform;transition:filter .7s cubic-bezier(.2,.8,.2,1)!important}
 .work-card:hover .art-image{filter:drop-shadow(0 45px 35px rgba(0,0,0,.34)) saturate(1.12);transform:none}
-.art-composite{position:absolute;inset:8%;z-index:2;filter:drop-shadow(0 35px 28px rgba(0,0,0,.25));transform:translateZ(40px);perspective:900px}
+.art-composite{position:absolute;inset:8%;z-index:2;box-shadow:0 35px 28px rgba(0,0,0,.25);transform:translateZ(40px);perspective:900px}
 .art-composite-base,.art-layer{position:absolute;inset:0;display:block;background-repeat:no-repeat;background-position:center;background-size:cover;will-change:transform,opacity,filter}
 .art-composite-base{z-index:0}
 .art-layer{z-index:1}
@@ -53,7 +53,7 @@ footer{padding:110px 3vw 30px;background:var(--ink);color:var(--paper);position:
 .assembly-3 .art-layer{transform-origin:right center}
 .assembly-4 .art-layer{transform-origin:center}
 .assembly-5 .art-layer{transform-origin:center;backface-visibility:hidden}
-.work-card:hover .art-composite{filter:drop-shadow(0 45px 35px rgba(0,0,0,.34)) saturate(1.1)}
+.work-card:hover .art-composite{box-shadow:0 45px 35px rgba(0,0,0,.34)}
 .project-ghost{position:sticky;top:5vh;height:0;z-index:0;display:grid;place-items:center;font-size:72vw;font-weight:900;line-height:.75;letter-spacing:-.16em;opacity:.13;pointer-events:none;filter:blur(0);mix-blend-mode:multiply;transition:color .5s}
 .work-heading,.filters,.work-list{position:relative;z-index:2}
 .capabilities{overflow:hidden}
@@ -137,7 +137,7 @@ footer{background:#050609;color:#f3f0e7}
 .work-card.filtered-out{display:none!important}
 .card-stage{will-change:auto;contain:layout paint}
 .work-copy{backdrop-filter:none;background:rgba(10,13,19,.96)}
-.art-composite{filter:drop-shadow(0 18px 18px rgba(0,0,0,.18))}
+.art-composite{box-shadow:0 18px 18px rgba(0,0,0,.18)}
 .art-composite-base,.art-layer{will-change:auto}
 .project-index{will-change:auto}
 

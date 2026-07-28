@@ -106,7 +106,7 @@ export default function Home(){
           ];
           const paths=pathSets[variant];
           const startScales=[.28,.55,.7,.82,1.75,2.8];
-          const assembly=gsap.timeline({scrollTrigger:{trigger:el,start:"top 98%",end:"top 30%",scrub:1.1}});
+          const assembly=gsap.timeline({paused:true,scrollTrigger:{trigger:el,start:"top 92%",toggleActions:"play none none reverse"}});
           assembly.fromTo(layers,{
             x:(layerIndex:number)=>paths[layerIndex][0]*(i%2?-1:1),
             y:(layerIndex:number)=>paths[layerIndex][1],
